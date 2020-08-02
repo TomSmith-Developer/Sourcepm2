@@ -43,3 +43,17 @@ restart(){
     pm2 restart index.js
     echo "Restarted"
 }
+
+welcome
+break
+options
+case $option in 
+    1)  start
+    ;;
+    2)  stop
+    ;;
+    3)  restart
+    ;;
+    *)  echo "Your selection was not valid. Please try again:"
+    options
+esac
